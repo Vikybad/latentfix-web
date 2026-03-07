@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #10b981; /* Soft Emerald Green */
+  --color-surface: #0f172a; /* Deep Slate Navy */
+  --color-text-muted: #94a3b8; /* Soft Gray */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: #020617; /* Near Black Navy */
+  color: #f8fafc;
+}

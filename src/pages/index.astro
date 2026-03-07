@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="LatentFix | Professional Performance Engineering">
+	<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+		<div class="absolute -top-[25%] -left-[10%] w-[50%] h-[50%] bg-brand/5 blur-[120px] rounded-full"></div>
+	</div>
+
+	<main class="max-w-5xl mx-auto px-8">
+		<nav class="sticky top-0 z-50 w-full border-b border-white/5 bg-slate-950/80 backdrop-blur-md">
+		    <div class="max-w-5xl mx-auto px-8 flex justify-between items-center py-5">
+		        <a href="/" class="group flex items-center gap-1 transition-transform hover:scale-[1.02]">
+		            <div class="text-2xl md:text-4xl font-black tracking-[-0.05em] leading-none">
+		                Latent<span class="text-brand">Fix</span>
+		            </div>
+		        </a>
+
+		        <div class="flex items-center gap-8">
+		            <a href="https://linkedin.com/in/vikrambadesara" target="_blank" class="hidden sm:block text-sm font-medium text-text-muted hover:text-white transition-colors">
+		                LinkedIn
+		            </a>
+		            <a href="#audit" class="text-sm font-bold bg-white text-black px-6 py-2.5 rounded-full hover:bg-brand hover:text-white transition-all shadow-xl shadow-brand/5">
+		                Free Audit
+		            </a>
+		        </div>
+		    </div>
+		</nav>
+
+		<header class="py-24">
+			<h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-8">
+				Precision performance for <br/> 
+				<span class="text-text-muted">modern software stacks.</span>
+			</h1>
+			<p class="text-xl text-text-muted max-w-2xl leading-relaxed mb-12">
+				We help engineering teams eliminate bottlenecks, reduce cloud costs, and deliver the "instant" experience users expect. Specialized in Node.js and distributed systems.
+			</p>
+			<div class="flex gap-4">
+				<a href="#audit" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform">Schedule Consultation</a>
+				<a href="https://wa.me/919499424304?text=Hi%20Vikram%2C%20I'm%20interested%20in%20a%20Performance%20Audit%20for%20my%20project.%20Can%20we%20discuss%3F" 
+				   class="group flex items-center justify-center gap-3 border border-white/10 px-8 py-4 rounded-xl font-bold text-lg transition-all hover:border-brand/50 hover:bg-brand/5 hover:text-brand">
+				    <span class="relative">
+				        WhatsApp Chat
+				        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all group-hover:w-full"></span>
+				    </span>
+				</a>
+			</div>
+		</header>
+
+		<section class="grid md:grid-cols-3 gap-12 py-20 border-t border-white/5">
+			<div class="space-y-4">
+				<h3 class="text-lg font-bold text-brand uppercase tracking-widest">Audit</h3>
+				<p class="text-white text-xl font-medium">Full-Stack Analysis</p>
+				<p class="text-text-muted">A deep dive into your metrics to find hidden latencies in your API and Database layer.</p>
+			</div>
+			<div class="space-y-4">
+				<h3 class="text-lg font-bold text-brand uppercase tracking-widest">Scale</h3>
+				<p class="text-white text-xl font-medium">Architecture Review</p>
+				<p class="text-text-muted">Redesigning bottlenecks to ensure your system handles 10x traffic without breaking.</p>
+			</div>
+			<div class="space-y-4">
+				<h3 class="text-lg font-bold text-brand uppercase tracking-widest">Speed</h3>
+				<p class="text-white text-xl font-medium">Vitals Optimization</p>
+				<p class="text-text-muted">Improving LCP, FID, and CLS scores to boost SEO ranking and user retention.</p>
+			</div>
+		</section>
+
+		<section class="py-24 border-t border-white/5">
+		    <h2 class="text-3xl font-bold mb-16 tracking-tight">Proven results in high-stakes environments.</h2>
+		    <div class="grid md:grid-cols-2 gap-8">
+		        <div class="p-10 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-colors">
+		            <div class="text-brand font-mono text-sm uppercase tracking-widest mb-6">Logistics Optimization</div>
+		            <h3 class="text-2xl font-semibold mb-4 leading-snug">Reduced system-wide latency by 30% for a multi-plant logistics network.</h3>
+		            <p class="text-text-muted leading-relaxed">Refactored core system architecture to handle real-time fleet availability and order processing across 16 client plants.</p>
+		        </div>
+		        <div class="p-10 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-colors">
+		            <div class="text-brand font-mono text-sm uppercase tracking-widest mb-6">Real-Time Systems</div>
+		            <h3 class="text-2xl font-semibold mb-4 leading-snug">Eliminated production environment bottlenecks for engineering teams.</h3>
+		            <p class="text-text-muted leading-relaxed">Built high-performance streaming solutions using WebSockets and Node.js to provide instant access to mission-critical production logs.</p>
+		        </div>
+		    </div>
+		</section>
+
+		<section id="audit" class="my-32 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/5 text-center">
+			<h2 class="text-4xl font-semibold mb-6">Ready to optimize?</h2>
+			<p class="text-lg text-text-muted mb-10 max-w-xl mx-auto">Book a 15-minute introductory call. We'll discuss your current challenges and provide immediate actionable feedback.</p>
+		</section>
+
+		<section id="audit" class="my-32 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/4">
+			<div class="max-w-3xl mx-auto">
+			    <div class="text-center mb-12">
+			        <h2 class="text-4xl font-semibold mb-4">Request a Performance Audit</h2>
+			        <p class="text-text-muted">Tell us about your bottlenecks. We'll review your details and reach out within 24 hours to schedule a deep dive.</p>
+			    </div>
+
+			    <form action="https://formspree.io/f/mbdzjvea" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			        <div class="flex flex-col gap-2">
+			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Full Name</label>
+			            <input type="text" name="Full Name" required placeholder="John Doe" 
+			                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+			        </div>
+
+			        <div class="flex flex-col gap-2">
+			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Company / Project</label>
+			            <input type="text" name="Company / Project" placeholder="LatentFix" 
+			                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+			        </div>
+
+			        <div class="flex flex-col gap-2">
+			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Primary Bottleneck</label>
+			            <select name="Primary Bottleneck" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
+			                <option value="api">API Latency (Slow Responses)</option>
+			                <option value="db">Database Performance (Slow Queries)</option>
+			                <option value="scale">Scaling Issues (Server Crashes)</option>
+			                <option value="frontend">Frontend Vitals (Speed)</option>
+			                <option value="other">Other / General Optimization</option>
+			            </select>
+			        </div>
+
+			        <div class="flex flex-col gap-2">
+			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Primary Stack</label>
+			            <select name="Primary Stack" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
+			                <option value="nodejs">Node.js / TypeScript</option>
+			                <option value="sql">SQL (PostgreSQL/MySQL)</option>
+			                <option value="nosql">NoSQL (MongoDB/Redis)</option>
+							<option value="nosql">Other </option>
+			            </select>
+			        </div>
+
+			        <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
+			            <div class="flex flex-col gap-2">
+			                <label class="text-xs font-bold uppercase tracking-widest text-brand">Email Address</label>
+			                <input type="email" id="email" name="Email Address" placeholder="vikram@latentfix.com" 
+			                    class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+			            </div>
+			            <div class="flex flex-col gap-2">
+			                <label class="text-xs font-bold uppercase tracking-widest text-brand">WhatsApp / Phone</label>
+			                <input type="tel" id="phone" name="WhatsApp / Phone" placeholder="+91 XXX-XXX-XXXX" 
+			                    class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+			            </div>
+			        </div>
+
+			        <div class="md:col-span-2 flex flex-col gap-2">
+			            <label class="text-xs font-bold uppercase tracking-widest text-brand">How can we help?</label>
+			            <textarea id="details" name="How can we help?" rows="4" placeholder="Describe the current issue (e.g., API takes 2s to respond under load...)" 
+			                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition"></textarea>
+			        </div>
+
+			        <div class="md:col-span-2 mt-4">
+			            <button type="submit" 
+			                class="w-full bg-white text-black font-black py-5 rounded-2xl text-xl hover:bg-brand hover:text-white transition-all shadow-xl shadow-brand/5">
+			                Request Free Audit
+			            </button>
+			            <p class="text-center text-[10px] text-text-muted mt-4 uppercase tracking-[0.2em]">Zero Strings Attached. Engineering Focused.</p>
+			        </div>
+		        </form>
+		    </div>
+		</section>
+
+		<script>
+		    // Simple logic to ensure at least Email OR Phone is filled
+		    const form = document.querySelector('form');
+		    form.addEventListener('submit', (e) => {
+		        const email = document.getElementById('email').value;
+		        const phone = document.getElementById('phone').value;
+		        if (!email && !phone) {
+		            e.preventDefault();
+		            alert('Please provide either an Email or Phone number so we can reach you.');
+		        }
+		    });
+		</script>
+
+		<footer class="py-20 border-t border-white/5 flex flex-col md:flex-row justify-between text-text-muted text-sm">
+			<p>© 2026 LatentFix. Engineering Excellence from Gurugram.</p>
+			<div class="flex gap-8 mt-4 md:mt-0">
+				<a href="https://linkedin.com/in/vikrambadesara" class="hover:text-white">LinkedIn</a>
+				<a href="https://x.com/latentfix" class="hover:text-white">Twitter / X</a>
+			</div>
+		</footer>
+	</main>
+</Layout>
