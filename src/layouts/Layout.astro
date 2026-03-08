@@ -1,15 +1,44 @@
 ---
+import { SEO } from "astro-seo";
 import '../styles/global.css';
-interface Props { title: string; }
+
+interface Props {
+	title: string;
+}
+
 const { title } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>{title}</title>
-		<meta name="description" content="LatentFix | Professional Node.js Performance Consulting" />
+		<link rel="icon" type="image/png" href="/BrandLogo.png" />
+
+		<SEO
+			title={title}
+			description="LatentFix: Professional Node.js performance consulting. We reduce API latency, optimize SQL queries, and scale infrastructure for high-growth startups."
+			canonical="https://latentfix.com"
+			openGraph={{
+				basic: {
+					title: "LatentFix | Performance & Scalability Engineering",
+					type: "website",
+					image: "https://latentfix.com/BrandLogo.png",
+				}
+			}}
+			twitter={{
+				creator: "@vikybad",
+				site: "@latentfix",
+				card: "summary_large_image",
+			}}
+			extend={{
+				meta: [
+					{ name: "keywords", content: "Node.js, Performance, Latency, API Optimization, Gurugram, Engineering" },
+					{ name: "author", content: "Vikram Badesara" },
+				],
+			}}
+		/>
 	</head>
 	<body class="antialiased">
 		<slot />
