@@ -7,6 +7,47 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+// Define the Schema.org data for better SEO visibility
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "LatentFix",
+  "image": "https://latentfix.com/BrandLogo.png",
+  "@id": "https://latentfix.com",
+  "url": "https://latentfix.com",
+  "telephone": "+919499424304",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "",
+    "addressLocality": "Gurugram",
+    "addressRegion": "Haryana",
+    "postalCode": "",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.4595,
+    "longitude": 77.0266
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/vikrambadesara",
+    "https://x.com/latentfix"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Vikram Badesara"
+  },
+  "description": "Expert performance engineering for React, React Native, and Node.js. Specializing in Express REST API optimization, SQL query tuning, and high-scale infrastructure."
+};
 ---
 
 <!doctype html>
@@ -18,13 +59,13 @@ const { title } = Astro.props;
 
 		<SEO
 			title={title}
-			description="LatentFix: Professional Node.js performance consulting. We reduce API latency, optimize SQL queries, and scale infrastructure for high-growth startups."
+			description="LatentFix: Professional performance engineering for Node.js, React, and React Native. We optimize Express REST APIs, SQL queries, and analytics tracking to reduce latency for high-growth startups."
 			canonical="https://latentfix.com"
 			openGraph={{
 				basic: {
-					title: "LatentFix | Performance & Scalability Engineering",
+					title: "LatentFix | Node.js & React Performance Engineering",
 					type: "website",
-					image: "https://latentfix.com/BrandLogo.png",
+					image: "https://latentfix.com/BrandLogo.webp",
 				}
 			}}
 			twitter={{
@@ -34,11 +75,13 @@ const { title } = Astro.props;
 			}}
 			extend={{
 				meta: [
-					{ name: "keywords", content: "Node.js, Performance, Latency, API Optimization, Gurugram, Engineering" },
+					{ name: "keywords", content: "Node.js Performance, React Optimization, React Native Speed, Express API Latency, SQL Query Optimization, LatentFix, Performance Engineering Gurugram, REST API Scaling, Analytics Tracking, Full-stack scalability" },
 					{ name: "author", content: "Vikram Badesara" },
 				],
 			}}
 		/>
+
+		<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 	</head>
 	<body class="antialiased">
 		<slot />

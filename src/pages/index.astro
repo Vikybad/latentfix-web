@@ -28,44 +28,124 @@ import Layout from '../layouts/Layout.astro';
 		</nav>
 
 		<header class="py-24">
-			<h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-8">
+		    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold uppercase tracking-widest mb-6">
+		        <span>●</span> Optimized for High-Growth Startups
+		    </div>
+		    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] mb-8">
 				Precision performance for <br/> 
 				<span class="text-text-muted">modern software stacks.</span>
 			</h1>
-			<p class="text-xl text-text-muted max-w-2xl leading-relaxed mb-12">
-				We help engineering teams eliminate bottlenecks, reduce cloud costs, and deliver the "instant" experience users expect. Specialized in Node.js and distributed systems.
-			</p>
-			<div class="flex gap-4">
-				<a href="#audit" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform">Schedule Consultation</a>
-				<a href="https://wa.me/919499424304?text=Hi%20Vikram%2C%20I'm%20interested%20in%20a%20Performance%20Audit%20for%20my%20project.%20Can%20we%20discuss%3F" 
-				   class="group flex items-center justify-center gap-3 border border-white/10 px-8 py-4 rounded-xl font-bold text-lg transition-all hover:border-brand/50 hover:bg-brand/5 hover:text-brand">
-				    <span class="relative">
-				        WhatsApp Chat
-				        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all group-hover:w-full"></span>
-				    </span>
-				</a>
-			</div>
+		    <p class="text-xl text-text-muted max-w-2xl leading-relaxed mb-12">
+		        We help engineering teams eliminate bottlenecks across **React**, **React Native**, and **Node.js**. From refactoring heavy **Express** middleware to optimizing **REST API** latency, we ensure your infrastructure scales as fast as your user base. ⚡
+		    </p>
+		    <div class="flex flex-wrap gap-4">
+		        <a href="#audit" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform">Get a Performance Audit</a>
+		        <a href="https://wa.me/919499424304" class="group flex items-center justify-center gap-3 border border-white/10 px-8 py-4 rounded-xl font-bold text-lg transition-all hover:border-brand/50 hover:bg-brand/5 hover:text-brand">
+		            <span>WhatsApp Vikram</span>
+		        </a>
+		    </div>
 		</header>
 
-		<section class="grid md:grid-cols-3 gap-12 py-20 border-t border-white/5">
-			<div class="space-y-4">
-				<h3 class="text-lg font-bold text-brand uppercase tracking-widest">Audit</h3>
-				<p class="text-white text-xl font-medium">Full-Stack Analysis</p>
-				<p class="text-text-muted">A deep dive into your metrics to find hidden latencies in your API and Database layer.</p>
-			</div>
-			<div class="space-y-4">
-				<h3 class="text-lg font-bold text-brand uppercase tracking-widest">Scale</h3>
-				<p class="text-white text-xl font-medium">Architecture Review</p>
-				<p class="text-text-muted">Redesigning bottlenecks to ensure your system handles 10x traffic without breaking.</p>
-			</div>
-			<div class="space-y-4">
-				<h3 class="text-lg font-bold text-brand uppercase tracking-widest">Speed</h3>
-				<p class="text-white text-xl font-medium">Vitals Optimization</p>
-				<p class="text-text-muted">Improving LCP, FID, and CLS scores to boost SEO ranking and user retention.</p>
-			</div>
+		<section class="py-12 overflow-hidden border-y border-white/5 bg-white/[0.01]">
+		    <div class="flex whitespace-nowrap gap-12 animate-scroll">
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">Node.js</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">React</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">React Native</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">Express</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">REST APIs</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">PostgreSQL</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">Redis</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">Analytics Tracking</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">Node.js</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">React</span>
+		        <span class="text-xl font-mono text-text-muted/40 uppercase tracking-widest">React Native</span>
+		    </div>
+		</section>
+
+		<style>
+		    @keyframes scroll {
+		        from { transform: translateX(0); }
+		        to { transform: translateX(-50%); }
+		    }
+		    .animate-scroll {
+		        animation: scroll 30s linear infinite;
+		        width: max-content;
+		    }
+		</style>
+
+		<section class="grid md:grid-cols-3 gap-12 py-24 border-t border-white/5">
+		    <div class="group p-8 rounded-2xl hover:bg-white/[0.02] transition-colors">
+		        <div class="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center text-brand mb-6">
+		            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+		        </div>
+		        <h3 class="text-lg font-bold text-brand uppercase tracking-widest mb-2">API & Backend</h3>
+		        <p class="text-white text-xl font-medium mb-4">Express & REST Optimization</p>
+		        <p class="text-text-muted">We eliminate event-loop lag, refactor slow middleware, and optimize **SQL query execution plans** to ensure your backend never stays in the way of growth. 🚀</p>
+		    </div>
+
+		    <div class="group p-8 rounded-2xl hover:bg-white/[0.02] transition-colors">
+		        <div class="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center text-brand mb-6">
+		            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+		        </div>
+		        <h3 class="text-lg font-bold text-brand uppercase tracking-widest mb-2">Frontend & Mobile</h3>
+		        <p class="text-white text-xl font-medium mb-4">React & Native Vitals</p>
+		        <p class="text-text-muted">Specialized in **React Native bridge optimization** and React rendering cycles. We solve "jank" and slow interactions to provide a buttery-smooth native experience. 📲</p>
+		    </div>
+
+		    <div class="group p-8 rounded-2xl hover:bg-white/[0.02] transition-colors">
+		        <div class="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center text-brand mb-6">
+		            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+		        </div>
+		        <h3 class="text-lg font-bold text-brand uppercase tracking-widest mb-2">Measurement</h3>
+		        <p class="text-white text-xl font-medium mb-4">Analytics & Tracking</p>
+		        <p class="text-text-muted">Data-driven performance. We implement precision **tracking and monitoring** (Sentry, PostHog, or custom) to catch silent bottlenecks before your users do. 📉</p>
+		    </div>
+		</section>
+
+		<section class="py-24 border-y border-white/5">
+		    <div class="max-w-3xl">
+		        <h2 class="text-3xl font-bold mb-8 tracking-tight text-white">Why performance is your secret weapon.</h2>
+		        <div class="space-y-8">
+		            <div class="flex gap-6">
+		                <div class="text-brand font-bold text-2xl italic">01.</div>
+		                <div>
+		                    <h4 class="text-lg font-semibold text-white">Higher Conversion</h4>
+		                    <p class="text-text-muted">A 100ms delay in response time can drop conversion rates by 7%. Speed isn't just a technical metric; it's a revenue metric.</p>
+		                </div>
+		            </div>
+		            <div class="flex gap-6">
+		                <div class="text-brand font-bold text-2xl italic">02.</div>
+		                <div>
+		                    <h4 class="text-lg font-semibold text-white">Lower Infrastructure Costs</h4>
+		                    <p class="text-text-muted">Optimized Express APIs and SQL queries require fewer server resources. We help you scale your user base while keeping your cloud bill flat.</p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
 		</section>
 
 		<section class="py-24 border-t border-white/5">
+		    <h2 class="text-3xl font-bold mb-16 tracking-tight text-center">From Bottleneck to Benchmark in 3 Weeks.</h2>
+		    <div class="grid md:grid-cols-3 gap-8 text-center">
+		        <div class="space-y-4">
+		            <div class="w-12 h-12 bg-brand text-black font-bold rounded-full flex items-center justify-center mx-auto text-xl shadow-lg shadow-brand/20">1</div>
+		            <h4 class="text-xl font-bold text-white">The Deep Audit</h4>
+		            <p class="text-text-muted text-sm px-4">We hook into your APM tools or logs to identify the exact SQL queries or React components killing your speed.</p>
+		        </div>
+		        <div class="space-y-4">
+		            <div class="w-12 h-12 bg-brand text-black font-bold rounded-full flex items-center justify-center mx-auto text-xl shadow-lg shadow-brand/20">2</div>
+		            <h4 class="text-xl font-bold text-white">Surgical Optimization</h4>
+		            <p class="text-text-muted text-sm px-4">We don't just give advice; we push PRs. We refactor the critical path, implement caching, and tune your DB.</p>
+		        </div>
+		        <div class="space-y-4">
+		            <div class="w-12 h-12 bg-brand text-black font-bold rounded-full flex items-center justify-center mx-auto text-xl shadow-lg shadow-brand/20">3</div>
+		            <h4 class="text-xl font-bold text-white">Scaling Guardrails</h4>
+		            <p class="text-text-muted text-sm px-4">We set up automated performance tests so that your team can keep shipping fast without regressing.</p>
+		        </div>
+		    </div>
+		</section>
+
+		<section class="py-16 border-t border-white/5">
 		    <h2 class="text-3xl font-bold mb-16 tracking-tight">Proven results in high-stakes environments.</h2>
 		    <div class="grid md:grid-cols-2 gap-8">
 		        <div class="p-10 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-brand/30 transition-colors">
@@ -81,12 +161,12 @@ import Layout from '../layouts/Layout.astro';
 		    </div>
 		</section>
 
-		<section id="audit" class="my-32 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/5 text-center">
+		<section id="audit" class="my-12 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/5 text-center">
 			<h2 class="text-4xl font-semibold mb-6">Ready to optimize?</h2>
 			<p class="text-lg text-text-muted mb-10 max-w-xl mx-auto">Book a 15-minute introductory call. We'll discuss your current challenges and provide immediate actionable feedback.</p>
 		</section>
 
-		<section id="audit" class="my-32 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/4">
+		<section id="audit" class="my-28 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/4">
 			<div class="max-w-3xl mx-auto">
 			    <div class="text-center mb-12">
 			        <h2 class="text-4xl font-semibold mb-4">Request a Performance Audit</h2>
@@ -94,66 +174,59 @@ import Layout from '../layouts/Layout.astro';
 			    </div>
 
 			    <form action="https://formspree.io/f/mbdzjvea" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			        <div class="flex flex-col gap-2">
-			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Full Name</label>
-			            <input type="text" name="Full Name" required placeholder="John Doe" 
-			                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-			        </div>
+				    <div class="flex flex-col gap-2">
+				        <label for="full-name" class="text-xs font-bold uppercase tracking-widest text-brand">Full Name</label>
+				        <input type="text" id="full-name" name="Full Name" required placeholder="John Doe" 
+				            class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+				    </div>
 
-			        <div class="flex flex-col gap-2">
-			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Company / Project</label>
-			            <input type="text" name="Company / Project" placeholder="LatentFix" 
-			                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-			        </div>
+				    <div class="flex flex-col gap-2">
+				        <label for="company" class="text-xs font-bold uppercase tracking-widest text-brand">Company / Project</label>
+				        <input type="text" id="company" name="Company / Project" placeholder="LatentFix" 
+				            class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+				    </div>
 
-			        <div class="flex flex-col gap-2">
-			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Primary Bottleneck</label>
-			            <select name="Primary Bottleneck" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
-			                <option value="api">API Latency (Slow Responses)</option>
-			                <option value="db">Database Performance (Slow Queries)</option>
-			                <option value="scale">Scaling Issues (Server Crashes)</option>
-			                <option value="frontend">Frontend Vitals (Speed)</option>
-			                <option value="other">Other / General Optimization</option>
-			            </select>
-			        </div>
+				    <div class="flex flex-col gap-2">
+				        <label for="bottleneck" class="text-xs font-bold uppercase tracking-widest text-brand">Primary Bottleneck</label>
+				        <select id="bottleneck" name="Primary Bottleneck" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
+				            <option value="api">API Latency (Slow Responses)</option>
+				            <option value="db">Database Performance (Slow Queries)</option>
+				            <option value="scale">Scaling Issues (Server Crashes)</option>
+				            <option value="frontend">Frontend Vitals (Speed)</option>
+				            <option value="other">Other / General Optimization</option>
+				        </select>
+				    </div>
 
-			        <div class="flex flex-col gap-2">
-			            <label class="text-xs font-bold uppercase tracking-widest text-brand">Primary Stack</label>
-			            <select name="Primary Stack" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
-			                <option value="nodejs">Node.js / TypeScript</option>
-			                <option value="sql">SQL (PostgreSQL/MySQL)</option>
-			                <option value="nosql">NoSQL (MongoDB/Redis)</option>
-							<option value="nosql">Other </option>
-			            </select>
-			        </div>
+				    <div class="flex flex-col gap-2">
+				        <label for="stack" class="text-xs font-bold uppercase tracking-widest text-brand">Primary Stack</label>
+				        <select id="stack" name="Primary Stack" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
+				            <option value="nodejs">Node.js / TypeScript</option>
+				            <option value="react">React / React Native</option>
+				            <option value="sql">SQL (PostgreSQL/MySQL)</option>
+				            <option value="nosql">NoSQL (MongoDB/Redis)</option>
+				            <option value="other">Other </option>
+				        </select>
+				    </div>
 
-			        <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
-			            <div class="flex flex-col gap-2">
-			                <label class="text-xs font-bold uppercase tracking-widest text-brand">Email Address</label>
-			                <input type="email" id="email" name="Email Address" placeholder="vikram@latentfix.com" 
-			                    class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-			            </div>
-			            <div class="flex flex-col gap-2">
-			                <label class="text-xs font-bold uppercase tracking-widest text-brand">WhatsApp / Phone</label>
-			                <input type="tel" id="phone" name="WhatsApp / Phone" placeholder="+91 XXX-XXX-XXXX" 
-			                    class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-			            </div>
-			        </div>
+				    <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
+				        <div class="flex flex-col gap-2">
+				            <label for="email" class="text-xs font-bold uppercase tracking-widest text-brand">Email Address</label>
+				            <input type="email" id="email" name="Email Address" placeholder="vikram@latentfix.com" 
+				                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+				        </div>
+				        <div class="flex flex-col gap-2">
+				            <label for="phone" class="text-xs font-bold uppercase tracking-widest text-brand">WhatsApp / Phone</label>
+				            <input type="tel" id="phone" name="WhatsApp / Phone" placeholder="+91 XXX-XXX-XXXX" 
+				                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+				        </div>
+				    </div>
 
-			        <div class="md:col-span-2 flex flex-col gap-2">
-			            <label class="text-xs font-bold uppercase tracking-widest text-brand">How can we help?</label>
-			            <textarea id="details" name="How can we help?" rows="4" placeholder="Describe the current issue (e.g., API takes 2s to respond under load...)" 
-			                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition"></textarea>
-			        </div>
-
-			        <div class="md:col-span-2 mt-4">
-			            <button type="submit" 
-			                class="w-full bg-white text-black font-black py-5 rounded-2xl text-xl hover:bg-brand hover:text-white transition-all shadow-xl shadow-brand/5">
-			                Request Free Audit
-			            </button>
-			            <p class="text-center text-[10px] text-text-muted mt-4 uppercase tracking-[0.2em]">Zero Strings Attached. Engineering Focused.</p>
-			        </div>
-		        </form>
+				    <div class="md:col-span-2 flex flex-col gap-2">
+				        <label for="details" class="text-xs font-bold uppercase tracking-widest text-brand">How can we help?</label>
+				        <textarea id="details" name="How can we help?" rows="4" placeholder="Describe the current issue (e.g., API takes 2s to respond under load...)" 
+				            class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition"></textarea>
+				    </div>
+				</form>
 		    </div>
 		</section>
 
@@ -169,6 +242,28 @@ import Layout from '../layouts/Layout.astro';
 		        }
 		    });
 		</script>
+
+		<section class="py-24 border-t border-white/5">
+		    <h2 class="text-3xl font-bold mb-12 tracking-tight">Immediate Performance Wins ⚡</h2>
+		    <div class="grid md:grid-cols-2 gap-8">
+		        <div class="p-8 rounded-2xl bg-white/[0.01] border border-white/5">
+		            <h4 class="text-brand font-bold mb-2">01. Node.js Event Loop</h4>
+		            <p class="text-text-muted text-sm">Avoid heavy computational tasks in your Express routes. Use Worker Threads or offload to a background job to keep the loop free for incoming requests.</p>
+		        </div>
+		        <div class="p-8 rounded-2xl bg-white/[0.01] border border-white/5">
+		            <h4 class="text-brand font-bold mb-2">02. React Native "Jank"</h4>
+		            <p class="text-text-muted text-sm">Minimize bridge traffic. Keep animations in the native thread and avoid passing huge data blobs between JS and the native side.</p>
+		        </div>
+		        <div class="p-8 rounded-2xl bg-white/[0.01] border border-white/5">
+		            <h4 class="text-brand font-bold mb-2">03. SQL Indexing</h4>
+		            <p class="text-text-muted text-sm">A missing index on a foreign key can turn a 10ms query into a 2s bottleneck as your table grows. Audit your slow query logs monthly.</p>
+		        </div>
+		        <div class="p-8 rounded-2xl bg-white/[0.01] border border-white/5">
+		            <h4 class="text-brand font-bold mb-2">04. Analytics Payload</h4>
+		            <p class="text-text-muted text-sm">Third-party tracking scripts are often the biggest cause of high TBT (Total Blocking Time). Load them via a Web Worker or use a server-side proxy.</p>
+		        </div>
+		    </div>
+		</section>
 
 		<footer class="py-20 border-t border-white/5 flex flex-col md:flex-row justify-between text-text-muted text-sm">
 			<p>© 2026 LatentFix. Engineering Excellence from Gurugram.</p>
