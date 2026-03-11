@@ -161,86 +161,147 @@ import Layout from '../layouts/Layout.astro';
 		    </div>
 		</section>
 
-		<section id="audit" class="my-12 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/5 text-center">
+		<section id="audit-intro" class="my-12 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/5 text-center">
 			<h2 class="text-4xl font-semibold mb-6">Ready to optimize?</h2>
 			<p class="text-lg text-text-muted mb-10 max-w-xl mx-auto">Book a 15-minute introductory call. We'll discuss your current challenges and provide immediate actionable feedback.</p>
 		</section>
 
 		<section id="audit" class="my-28 p-6 md:p-16 rounded-[2.5rem] bg-surface border border-white/4">
 			<div class="max-w-3xl mx-auto">
-			    <div class="text-center mb-12">
-			        <h2 class="text-4xl font-semibold mb-4">Request a Performance Audit</h2>
-			        <p class="text-text-muted">Tell us about your bottlenecks. We'll review your details and reach out within 24 hours to schedule a deep dive.</p>
-			    </div>
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-semibold mb-4">Request a Performance Audit</h2>
+					<p class="text-text-muted">Tell us about your bottlenecks. We'll review your details and reach out within 24 hours to schedule a deep dive.</p>
+				</div>
 
-			    <form action="https://formspree.io/f/mbdzjvea" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				    <div class="flex flex-col gap-2">
-				        <label for="full-name" class="text-xs font-bold uppercase tracking-widest text-brand">Full Name</label>
-				        <input type="text" id="full-name" name="Full Name" required placeholder="John Doe" 
-				            class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-				    </div>
+				<form action="https://formspree.io/f/mbdzjvea" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="flex flex-col gap-2">
+						<label for="full-name" class="text-xs font-bold uppercase tracking-widest text-brand">Full Name</label>
+						<input type="text" id="full-name" name="Full Name" required placeholder="John Doe" 
+							class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+					</div>
+					<div class="flex flex-col gap-2">
+						<label for="company" class="text-xs font-bold uppercase tracking-widest text-brand">Company / Project</label>
+						<input type="text" id="company" name="Company / Project" placeholder="LatentFix" 
+							class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
+					</div>
 
-				    <div class="flex flex-col gap-2">
-				        <label for="company" class="text-xs font-bold uppercase tracking-widest text-brand">Company / Project</label>
-				        <input type="text" id="company" name="Company / Project" placeholder="LatentFix" 
-				            class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-				    </div>
+					<div class="flex flex-col gap-2">
+						<label for="bottleneck" class="text-xs font-bold uppercase tracking-widest text-brand">Primary Bottleneck</label>
+						<select id="bottleneck" name="Primary Bottleneck" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
+							<option value="api">API Latency (Slow Responses)</option>
+							<option value="db">Database Performance (Slow Queries)</option>
+							<option value="scale">Scaling Issues (Server Crashes)</option>
+							<option value="frontend">Frontend Vitals (Speed)</option>
+							<option value="other">Other / General Optimization</option>
+						</select>
+					</div>
+					<div class="flex flex-col gap-2">
+						<label for="stack" class="text-xs font-bold uppercase tracking-widest text-brand">Primary Stack</label>
+						<select id="stack" name="Primary Stack" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
+							<option value="nodejs">Node.js / TypeScript</option>
+							<option value="react">React / React Native</option>
+							<option value="sql">SQL (PostgreSQL/MySQL)</option>
+							<option value="nosql">NoSQL (MongoDB/Redis)</option>
+							<option value="other">Other </option>
+						</select>
+					</div>
 
-				    <div class="flex flex-col gap-2">
-				        <label for="bottleneck" class="text-xs font-bold uppercase tracking-widest text-brand">Primary Bottleneck</label>
-				        <select id="bottleneck" name="Primary Bottleneck" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
-				            <option value="api">API Latency (Slow Responses)</option>
-				            <option value="db">Database Performance (Slow Queries)</option>
-				            <option value="scale">Scaling Issues (Server Crashes)</option>
-				            <option value="frontend">Frontend Vitals (Speed)</option>
-				            <option value="other">Other / General Optimization</option>
-				        </select>
-				    </div>
+					<div class="md:col-span-2 grid md:grid-cols-2 gap-6">
+						<div class="flex flex-col gap-2">
+							<label for="email" class="text-xs font-bold uppercase tracking-widest text-brand">Email Address</label>
+							<input type="email" id="email" name="Email Address" placeholder="vikram@latentfix.com" 
+								class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition w-full" />
+							<span id="email-error" class="text-[10px] text-red-500 uppercase font-bold tracking-tight hidden">Invalid email format</span>
+						</div>
+						<div class="flex flex-col gap-2">
+							<label for="phone" class="text-xs font-bold uppercase tracking-widest text-brand">WhatsApp / Phone</label>
+							<input type="tel" id="phone" name="WhatsApp / Phone" placeholder="+91 XXX-XXX-XXXX" 
+								class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition w-full" />
+							<span id="phone-error" class="text-[10px] text-red-500 uppercase font-bold tracking-tight hidden">Min 10 digits required</span>
+						</div>
+					</div>
 
-				    <div class="flex flex-col gap-2">
-				        <label for="stack" class="text-xs font-bold uppercase tracking-widest text-brand">Primary Stack</label>
-				        <select id="stack" name="Primary Stack" class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition appearance-none">
-				            <option value="nodejs">Node.js / TypeScript</option>
-				            <option value="react">React / React Native</option>
-				            <option value="sql">SQL (PostgreSQL/MySQL)</option>
-				            <option value="nosql">NoSQL (MongoDB/Redis)</option>
-				            <option value="other">Other </option>
-				        </select>
-				    </div>
+					<div class="md:col-span-2 flex flex-col gap-2">
+						<label for="details" class="text-xs font-bold uppercase tracking-widest text-brand">How can we help?</label>
+						<textarea id="details" name="How can we help?" rows="4" placeholder="Describe the issue..." 
+							class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition"></textarea>
+					</div>
 
-				    <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
-				        <div class="flex flex-col gap-2">
-				            <label for="email" class="text-xs font-bold uppercase tracking-widest text-brand">Email Address</label>
-				            <input type="email" id="email" name="Email Address" placeholder="vikram@latentfix.com" 
-				                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-				        </div>
-				        <div class="flex flex-col gap-2">
-				            <label for="phone" class="text-xs font-bold uppercase tracking-widest text-brand">WhatsApp / Phone</label>
-				            <input type="tel" id="phone" name="WhatsApp / Phone" placeholder="+91 XXX-XXX-XXXX" 
-				                class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition" />
-				        </div>
-				    </div>
-
-				    <div class="md:col-span-2 flex flex-col gap-2">
-				        <label for="details" class="text-xs font-bold uppercase tracking-widest text-brand">How can we help?</label>
-				        <textarea id="details" name="How can we help?" rows="4" placeholder="Describe the current issue (e.g., API takes 2s to respond under load...)" 
-				            class="bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-brand outline-none transition"></textarea>
-				    </div>
+					<div class="md:col-span-2 mt-4">
+						<div id="global-error" class="text-center text-[14px] text-red-500 uppercase font-bold tracking-widest mb-4 hidden">
+							Please provide a valid email or phone number to continue.
+						</div>
+						<button type="submit" 
+							class="w-full bg-white text-black font-black py-5 rounded-2xl text-xl hover:bg-brand hover:text-white transition-all shadow-xl shadow-brand/5 cursor-pointer">
+							Request Free Audit
+						</button>
+						<p class="text-center text-[10px] text-text-muted mt-4 uppercase tracking-[0.2em]">Zero Strings Attached. Engineering Focused.</p>
+					</div>
 				</form>
-		    </div>
+			</div>
 		</section>
 
-		<script>
-		    // Simple logic to ensure at least Email OR Phone is filled
-		    const form = document.querySelector('form');
-		    form.addEventListener('submit', (e) => {
-		        const email = document.getElementById('email').value;
-		        const phone = document.getElementById('phone').value;
-		        if (!email && !phone) {
-		            e.preventDefault();
-		            alert('Please provide either an Email or Phone number so we can reach you.');
-		        }
-		    });
+		<script is:inline>
+			const form = document.querySelector('form');
+			const emailInput = document.getElementById('email');
+			const phoneInput = document.getElementById('phone');
+
+			const emailError = document.getElementById('email-error');
+			const phoneError = document.getElementById('phone-error');
+			const globalError = document.getElementById('global-error');
+
+			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+			const toggleError = (input, errorEl, isInvalid) => {
+				if (isInvalid) {
+					input.classList.add('border-red-500');
+					input.classList.remove('border-white/10', 'focus:border-brand');
+					errorEl?.classList.remove('hidden');
+				} else {
+					input.classList.remove('border-red-500');
+					input.classList.add('border-white/10', 'focus:border-brand');
+					errorEl?.classList.add('hidden');
+				}
+			};
+
+			emailInput.addEventListener('blur', () => {
+				const val = emailInput.value.trim();
+				toggleError(emailInput, emailError, val !== "" && !emailPattern.test(val));
+			});
+
+			phoneInput.addEventListener('input', (e) => {
+				e.target.value = e.target.value.replace(/[^0-9+]/g, '');
+			});
+
+			phoneInput.addEventListener('blur', () => {
+				const val = phoneInput.value.replace(/\D/g, '');
+				toggleError(phoneInput, phoneError, phoneInput.value.trim() !== "" && val.length < 10);
+			});
+
+			form.addEventListener('submit', (e) => {
+				const emailVal = emailInput.value.trim();
+				const phoneDigits = phoneInput.value.replace(/\D/g, '');
+				
+				const isEmailValid = !emailVal || emailPattern.test(emailVal);
+				const isPhoneValid = !phoneDigits || phoneDigits.length >= 10;
+				const hasContactInfo = emailVal !== "" || phoneDigits !== "";
+
+				// Reset global error
+				globalError.classList.add('hidden');
+
+				if (!hasContactInfo) {
+					e.preventDefault();
+					globalError.classList.remove('hidden');
+					emailInput.classList.add('border-red-500');
+					phoneInput.classList.add('border-red-500');
+					return;
+				}
+
+				if (!isEmailValid || !isPhoneValid) {
+					e.preventDefault();
+					alert('Please fix the highlighted errors before submitting.');
+				}
+			});
 		</script>
 
 		<section class="py-24 border-t border-white/5">
