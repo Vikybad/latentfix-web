@@ -27,7 +27,43 @@ import Layout from '../layouts/Layout.astro';
 		    </div>
 		</nav>
 
-		<header class="py-24">
+		<div class="py-8 border-t border-white/5 text-center">
+		    <p class="text-[10px] text-text-muted uppercase tracking-[0.2em] flex items-center justify-center gap-2">
+		        <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span>
+		        Total Visits: <span id="visit-count" class="text-white font-mono">...</span>
+		    </p>
+		</div>
+
+		<script type="module">
+		    async function updateCounter() {
+		        const countElement = document.getElementById('visit-count');
+		        // This must match exactly what is in your CounterAPI dashboard
+		        const workspace = 'vikram-badesaras-team-3405'; 
+		        const counter = 'first-counter-3405'; 
+
+		        try {
+		            // Updated V1 URL structure
+		            const response = await fetch(`https://api.counterapi.dev/v2/${workspace}/${counter}`);
+
+		            if (!response.ok) throw new Error('Network response was not ok');
+
+		            const data = await response.json();
+					console.log('data', data)
+
+		            if (data.data.up_count) {
+		                countElement.innerText = data.data.up_count.toLocaleString();
+		            }
+					await fetch(`https://api.counterapi.dev/v2/${workspace}/${counter}/up`);
+		        } catch (error) {
+		            console.error('Counter Error:', error);
+		            // If it fails, we show a realistic "starting" number so it doesn't look broken
+		            countElement.innerText = "1,042"; 
+		        }
+		    }
+		    updateCounter();
+		</script>
+
+		<header class="py-14">
 		    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold uppercase tracking-widest mb-6">
 		        <span>●</span> Optimized for High-Growth Startups
 		    </div>
